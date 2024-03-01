@@ -41,7 +41,7 @@ export class EmployeesController {
   }
 
   @Delete(':id')
-  deleteEmployee(id: string) {
+  deleteEmployee(@Param('id') id: string) {
     return this.employeeService.deleteEmployee(+id);
   }
 }
